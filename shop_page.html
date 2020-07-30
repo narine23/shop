@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <title>Online Shop</title>
+</head>
+
+<body>
+
+    
+    <div class="container-fluid">
+  <header>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-3 d-none d-lg-block">
+          <p>tel. +374-11111111</p>
+        </div>
+
+        <div class="col-3 d-none d-lg-block">
+          <span>Welcome To Our Store</span>
+        </div>
+
+        <div class="col-6 col-lg-2 ">
+          <select class="custom-select">
+            <option selected>AM</option>
+            <option value="1">RUB</option>
+            <option value="2">USD</option>
+          </select>
+        </div>
+
+        <div class="col-6 col-lg-2 ">
+          <select class="custom-select">
+            <option selected>֏</option>
+            <option value="1">₽</option>
+            <option value="2">$</option>
+          </select>
+        </div>
+
+        <div class="col-2 d-none d-lg-block">
+          <a href="cart.html">
+            <button type="button" class="btn btn-primary">
+            
+            My Cart <span class="badge badge-light">7</span>
+          </button>
+          </a>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-dark bg-secondary">
+        <div class="col-5">
+          <a href="index.html">
+            <img src="data:image/png;base64,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" width="45px">
+          </a>
+        </div>
+        <div class="col-5 d-none d-lg-block">
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="  Search" aria-label="Search">
+            <button class="btn btn-warning" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="dropdown col-4 col-lg-2">
+          <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            My Account
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#LoginModal">Login</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#RegisterModal">Register</a>
+            <a class="dropdown-item" href="orders.html">My orders</a>
+            <a class="dropdown-item" href="acc_settings.html">Account Settings</a>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Women
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="shop_page.html">Shoes</a>
+                <a class="dropdown-item" href="#">Clothing</a>
+                <a class="dropdown-item" href="#">Bags & Handbags</a>
+                <a class="dropdown-item" href="#">Accessories</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Men
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Shoes</a>
+                <a class="dropdown-item" href="#">Clothing</a>
+                <a class="dropdown-item" href="#">Bags & Handbags</a>
+                <a class="dropdown-item" href="#">Accessories</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Kids
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Girls</a>
+                <a class="dropdown-item" href="#">Boys</a>
+                <a class="dropdown-item" href="#">All Kids</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Brands
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Geox</a>
+                <a class="dropdown-item" href="#">Hush Puppies'</a>
+                <a class="dropdown-item" href="#">Clarks</a>
+                <a class="dropdown-item" href="#">Nike</a>
+
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Sales
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Womens'</a>
+                <a class="dropdown-item" href="#">Mens'</a>
+                <a class="dropdown-item" href="#">Girls'</a>
+                <a class="dropdown-item" href="#">Boys'</a>
+                <a class="dropdown-item" href="#">Brands</a>
+            </li>
+          </ul>
+
+         
+          
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+  <!-- LoginModal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+     
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- RegisterModal -->
+   
+  <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+          <form>
+    <div class="row">
+      <div class="col">
+          <div class="form-group">
+        <input type="text" class="form-control" placeholder="First name">
+      </div>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+   
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+   
+    
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Shoes</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Women's Shoes</li>
+    </ol>
+</nav>
+        </div>
+        <div class="col-12 col-md-6">
+            <form action="" class="form-inline col-12 col-md-auto">
+                <label for="sortBy" class="mr-2">Sort By</label>
+                <select class="custom-select" id="sortBy">
+                    <option value="1">Price: Low to High</option>
+                    <option value="2">Price: High to Low</option>
+                    <option value="3">Rating</option>
+                </select>
+            </form>
+            </nav>
+
+        </div>
+  
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-3 d-none d-md-block">
+
+
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Size
+                      </button>
+                    </h2>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              2
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              3
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              4
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              5
+                            </label>
+                        </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Brand
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Nike
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Adidas
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Vans
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Puma
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Reebok
+                            </label>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Price
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               $50.00 and Under
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               $100.00 and Under
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               $200.00 and Under
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               $200.00 and Over
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingFour">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Color
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               White
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               Black
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               Grey
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               Green
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               Blue
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               Pink
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Yellow
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               Red
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            
+        </div>
+    
+            
+    
+    <div class="container col-12 col-md-9">
+        <div class="row">
+
+        
+            <div class="row no-gutters col-6 col-md-12">
+              <div class="col-md-3">
+                  <br> 
+                <a href="prod.html"> <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </a>
+            </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with  additional content.</p>
+                  
+                </div>
+              </div>
+              <div class="col-md-3"><br>
+                  <h2>$100.00</h2>
+                  <a href="#" class="btn btn-primary">Add To Cart</a>
+
+              </div>
+            </div>
+            <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+              <div class="row no-gutters col-6 col-md-12">
+                <div class="col-md-3">
+                    <br>
+                  <img src="https://m.media-amazon.com/images/I/81n3Pn-UB0L._AC_SR700,525_.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with  additional content.</p>
+                    
+                  </div>
+                </div>
+                <div class="col-md-3"><br>
+                    <h2>$100.00</h2>
+                    <a href="#" class="btn btn-primary">Add To Cart</a>
+  
+                </div>
+              </div>
+
+            </div>      
+             
+        
+          
+        
+
+
+
+    </div>
+    </div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    
+  <footer>
+
+    <div class="container">
+        
+        <div class="row">
+
+          <a href="#" class="border list-group-item list-group-item-action text-uppercase font-weight-bold text-center col-lg-3 col-sm-12">
+            Contact us
+          </a>
+          <a href="#" class="border-top border-bottom list-group-item list-group-item-action text-uppercase font-weight-bold text-center col-lg-3 col-sm-12">
+            live chat
+          </a>
+          <a href="#" class="border-top border-bottom list-group-item list-group-item-action text-uppercase font-weight-bold text-center col-lg-3 col-sm-12">
+            shipping
+          </a>
+          <a href="#" class="border list-group-item list-group-item-action text-uppercase font-weight-bold text-center col-lg-3 col-sm-12">
+            Term and Conditions
+          </a>
+
+        </div>
+
+        <div class="row">
+          
+          <div class = "col-lg d-none d-lg-block border">
+            <ul class="list-group">
+              <a href="#" class="action font-weight-bold text-body">Link Group 1</a>
+              <a href="#" class="action initial text-body">Link 1</a>
+              <a href="#" class="action text-body">Link 2</a>
+              <a href="#" class="action text-body">Link 3</a>
+            </ul>        
+          </div>
+          <div class = "col-lg d-none d-lg-block border">
+            <ul class="list-group">
+              <a href="#" class="action font-weight-bold text-body">Link Group 2</a>
+              <a href="#" class="action text-body">Link 1</a>
+              <a href="#" class="action text-body">Link 2</a>
+              <a href="#" class="action text-body">Link 3</a>
+            </ul>        
+          </div>
+          <div class = "col-lg d-none d-lg-block border">
+            <ul class="list-group">
+              <a href="#" class="action font-weight-bold text-body">Link Group 3</a>
+              <a href="#" class="action text-body">Link 1</a>
+              <a href="#" class="action text-body">Link 2</a>
+              <a href="#" class="action text-body">Link 3</a>
+            </ul>        
+          </div>
+          <div class = "col-lg d-none d-lg-block border">
+            <ul class="list-group">
+              <a href="#" class="action font-weight-bold text-body">Link Group 4</a>
+              <a href="#" class="action text-body">Link 1</a>
+              <a href="#" class="action text-body">Link 2</a>
+              <a href="#" class="action text-body">Link 3</a>
+            </ul>        
+          </div>
+          <div class = "col-lg d-none d-lg-block border">
+            <ul class="list-group">
+              <a href="#" class="action font-weight-bold text-body">Link Group 5</a>
+              <a href="#" class="action text-body">Link 1</a>
+              <a href="#" class="action text-body">Link 2</a>
+              <a href="#" class="action text-body">Link 3</a>
+            </ul>        
+          </div>
+
+        </div>
+
+        <div class="row p-3 mb-2 bg-dark text-white">
+          <div class = "col-2 d-none d-lg-block">Find us on:</div>
+
+          
+
+          <div class="col-12 col-lg-6 text-center">
+            <a href="#">
+              <img src="https://image.flaticon.com/icons/svg/889/889102.svg" width="50" height="30">
+            </a>
+            <a href="#">
+              <img src="https://image.flaticon.com/icons/svg/2111/2111463.svg" width="50" height="30">
+            </a>
+            <a href="#">
+              <img src="https://image.flaticon.com/icons/svg/1409/1409937.svg" width="50" height="30">
+            </a>
+            <a href="#">
+              <img src="https://image.flaticon.com/icons/svg/1384/1384060.svg" width="50" height="30">
+            </a>
+            </div>
+
+
+            <div class="col-12 col-md-3">
+                <p class="text-white text-center">©Narine Gyozalyan</p>
+            </div>
+          
+
+        </div>
+
+      </div>
+
+  </footer>
+
+</div>
+</div>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
